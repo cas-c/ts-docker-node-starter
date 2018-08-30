@@ -1,9 +1,9 @@
 FROM node:latest
 
 WORKDIR /usr/src/app
-COPY package*.json ./
+COPY . .
 
 RUN npm install
-COPY . .
+RUN npm run build
 
 CMD [ "npm", "start" ]
